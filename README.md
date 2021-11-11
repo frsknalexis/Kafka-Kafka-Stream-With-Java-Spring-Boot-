@@ -1,4 +1,4 @@
-# Kafka-Kafka-Stream-With-Java-Spring-Boot-
+# Kafka & Kafka Stream With Java Spring Boot - Hands-on Coding(Udemy)
 
 # Steps to download the Docker 
 
@@ -137,3 +137,19 @@ For example, type the following on command prompt :
 
 1. `C:\> docker exec -it kafka bash`
 2. `#> kafka-topics.sh`
+
+
+# create topic t_hello
+`kafka-topics.sh --bootstrap-server localhost:9092 --create --topic t_hello --partitions 1 --replication-factor 1`
+
+# list topic
+``kafka-topics.sh --bootstrap-server localhost:9092 --list``
+
+# describe topic
+`kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic t_hello`
+
+# create topic t_test
+`kafka-topics.sh --bootstrap-server localhost:9092 --create --topic t_test --partitions 1 --replication-factor 1`
+
+# delete topic t_test
+`kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic t_test`
