@@ -4,7 +4,9 @@
 
 You can download Docker Desktop for Windows from here - https://docs.docker.com/desktop/windows/install/
 
-Once you able to successfully setup do check
+Once you able to successfully setup do check and go to setting by right click on docker icon and enable
+
+![image](https://user-images.githubusercontent.com/54174687/141322746-4196bc9c-00de-403d-a0db-657578c7b42b.png)
 
 ```
 E:\development\kafka>docker --version
@@ -109,3 +111,29 @@ E:\development\kafka>docker-compose up -d
  - Container zookeeper  Started      20.3s
  - Container kafka      Started
 ```
+
+# Check Process
+
+```
+E:\development\kafka>docker-compose ps
+NAME                COMMAND                  SERVICE             STATUS              PORTS
+kafka               "start-kafka.sh"         kafka               running             0.0.0.0:9092->9092/tcp
+zookeeper           "/docker-entrypoint.…"   zookeeper           running             0.0.0.0:2181->2181/tcp
+```
+
+# To Stop 
+
+```
+E:\development\kafka>docker-compose stop
+```
+
+# Kafka Basic Commands (Docker)
+
+Open command prompt / terminal- Execute `docker exec -it kafka bash`
+
+Execute the script. Don't forget to add .sh extension (e.g. `kafka-topics.sh`)
+To exit docker terminal, type exit and press Enter
+For example, type the following on command prompt :
+
+1. `C:\> docker exec -it kafka bash`
+2. `#> kafka-topics.sh`
